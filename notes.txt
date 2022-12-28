@@ -1,0 +1,19 @@
+What all I learnt?
+-> API
+--> To use an api, I need to sign up and get an API key. 
+--> Follow the documentations to see to see how to use the API to get the kind of data I need
+--> Following the docs, use the right endpoint, path and parameeters to create the url (or at least skeleton of the url)
+--> To fetch data from this url, use https.get(url,(response)=>{})
+--> To get the statusCode use response.statusCode, to see if the fetching was successful or not
+--> To get the fetched data as JS object, use response.on("data",(data)=>{const myData = JSON.parse(data)})
+--> To get specific data from this object, parse it by giving the right paths
+--> Send all the fetched data to the client webpage using res.write/res.send
+
+**app.get("/",(req,res)) => is what we show to the client, app.post("/",(req,res)) => is what we take from client (and also show?)
+
+--> in order to use static images and css & js files that are in the local machine, we need to add them to a folder named "public" 
+and then include this in our backend code using : app.use(express.static("public"))
+
+--> to post data into a url, use https.request(url,options,callback(response))
+----> options is a JS object, which has a property "method" that can have the value get/post
+----> another property is "auth" which could hold the value of the api key

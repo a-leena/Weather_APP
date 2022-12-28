@@ -1,0 +1,100 @@
+body {
+    font-family:sans-serif;
+}
+
+#bgCard {
+    width:100%;
+    height: 100%;
+    background-image:url("../images/card_bg.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card {
+    position:relative;
+    height: 50%;
+    width: 75%;
+    background-size:contain;
+    background-color:rgba(209, 237, 255, 0.65);
+    /* margin:12.5% 12.5%; */
+    border-radius:70px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index:10;
+    box-shadow:25px 25px 75px black;
+}
+
+#text {
+    position:relative;
+    width:75%;
+    height:75%;
+    text-align:center;
+    /* border:1px solid black; */
+    margin:20%;
+    display:grid;
+    align-items: center;
+    place-items: center;
+}
+
+form {
+    width:100%;
+    /* border:1px solid black; */
+}
+
+input {
+    position: relative;
+    border:none;
+    font-size: large;
+    color:black;
+    /* border-radius:10px; */
+    display:block;
+    width:100%;
+    height:auto;
+    margin-top:5%;
+    padding:2.5%;
+    background-color:transparent;
+    border-bottom:2px solid black;
+    border-radius:10px;
+    /* border-style:hidden */
+}
+
+input:focus {
+    background-color:transparent;
+    outline:none;
+    border:none;
+    box-shadow:0px 0px 10px black;
+    border-radius:10px;
+}
+
+
+button {
+    text-align: center;
+    margin-top:7.5%;
+    width:auto;
+    height:auto;
+    padding:1.5%;
+    font-size:medium;
+    border:2px solid transparent;
+    border-radius:10px;
+    background-color: white;
+}
+
+button:hover {
+    background-color: rgb(100, 196, 255);
+    box-shadow:0px 0px 20px white;
+    color:black;
+}
+
+button:active {
+    transform:scale(0.98);
+    z-index:10;
+    border:2px solid rgb(100, 196, 255);
+    box-shadow:0px 0px 20px black;
+}
