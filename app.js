@@ -14,11 +14,14 @@ app.get("/",(req,res)=>{
     //console.log(req)
 })
 
+console.log(process.env)
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
 //my api key is stored in an environment variable of my system 
-const apiKey = JSON.parse(process.env['WEATHER_API_KEY']);
+console.log(process.env['WEATHER_API_KEY'])
+const apiKey = process.env['WEATHER_API_KEY'];
+
 app.post("/",(req,res)=>{
     console.log("Post recieved")
     console.log(req.body.city)
